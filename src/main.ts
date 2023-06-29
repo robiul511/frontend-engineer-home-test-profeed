@@ -17,7 +17,7 @@ const router = createRouter({
   routes,
 })
 router.beforeEach((to, from, next) => {
-  console.log(to, 'ini to nya');
+  console.log(from, 'ini from nya');
   if (to.path === '/brands' || to.path === '/' ) {
     next()
   } else {
