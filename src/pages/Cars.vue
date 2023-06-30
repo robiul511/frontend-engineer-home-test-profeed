@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { useCarsStore } from '../stores/cars.store'
+import { ref } from 'vue'
+// components
+import Button from '../components/Button/Button.vue'
+import Input from '../components/Input/Input.vue'
 
+// store
+import { useCarsStore } from '../stores/cars.store'
 import { useBrandsStore } from '../stores/brands.store'
 
 const brandStores = useBrandsStore()
@@ -18,6 +23,11 @@ const addBrands = () => {
   brandStores.addBrand(payload)
 }
 
+const test = () => {
+  console.log('masuk ajka njubng');
+}
+
+const testInput = ref('')
 
 </script>
 
@@ -27,6 +37,9 @@ const addBrands = () => {
     <router-link to="/brands">Go to brands page </router-link>
 
   </div>
+  <Button @click="test">MASuk njing</Button>
+  <Input v-model="testInput"/>
+  <p>Ini hasil inputannya {{ testInput }}</p>
   <h2> Cars Page </h2>
   <p>data cars</p>
   <p>{{ carStores.dataCars }}</p>

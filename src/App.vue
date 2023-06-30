@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue'
+import Notification from './components/Notification/Notification.vue'
 
 // const { brands } = storeToRefs(store)
 // console.log(brands);
@@ -16,6 +17,7 @@
     </a>
   </div> -->
   <!-- <HelloWorld msg="ROobi" /> -->
+  <Notification v-if="true"> Masuk </Notification>
   <RouterView />
 </template>
 
